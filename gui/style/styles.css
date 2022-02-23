@@ -1,0 +1,256 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    height: 100%;
+    overflow: hidden;
+}
+
+input[type=number]::-webkit-inner-spin-button, 
+input[type=number]::-webkit-outer-spin-button { 
+  -webkit-appearance: none; 
+}
+
+input[type=number] {
+  -moz-appearance: textfield;
+}
+
+.opaque {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    /*background: radial-gradient(circle closest-side, #b9b9b933 25%,  #55555544);*/
+    background: radial-gradient(circle closest-side, rgba(185,185,185,0.19) 25%,  rgba(85,85,85,0.27));
+    z-index: 5;
+}
+
+.round {
+    border-radius: 20px;
+}
+
+    .round, .bt-action:focus{
+        outline:0px;
+    }
+
+.tx {
+    border: 1px solid #555555;
+    height: 1.4em;
+    font-size: 1.3em;
+    text-align: center;
+}
+
+    .tx:hover {
+        background-color: #e8eaed77;
+    }
+
+    .tx:disabled {
+        background-color: white;
+    }
+
+header {
+    width: auto;
+    height: auto;
+    background-color: white;
+    overflow: visible;
+}
+
+.navigation {
+    height: min-content;
+}
+
+.navigation ul {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    list-style: none;
+    padding: .2em;
+    
+}
+
+    .navigation ul li{
+        padding-left: 1em;
+        margin: .7%;
+        overflow: visible;
+        height: min-content;
+    }
+
+.cronometro {
+    width: 5em;
+}
+
+.muestras {
+    width: 3.3em;
+
+}
+
+.bt-play {
+    padding: 8px;
+    border: 0px;
+    background-color: #5cb85c;
+}
+
+    .bt-play:hover {
+        /* background-color: rgb(126, 214, 126); */
+        background-color: #49a149;
+    }
+
+.bt-triangulo {
+     width: 0px;
+     height: 0px;
+     margin: 1px 0px 1px 3px;
+     border-left: 15px solid white;
+     border-top: 7.5px solid transparent;
+     border-bottom: 7.5px solid transparent;
+}
+
+.bt-cuadrado {
+    width: 14px; 
+    height: 14px;
+    margin: 2px 2px 2px 2px;
+    background: white;
+}
+
+.credential {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    height: auto;
+    background-color: white;
+    padding: .8em;
+    transform: translateX(-55%) translateY(-50%);
+    z-index: 10;
+}
+
+.password {
+    display: block;
+    width: 10em;
+    font-size: 1em;
+    margin-bottom: .5em;
+}
+
+.bt-container{
+    width: auto;
+    display: flex;
+    justify-content: space-between;
+    /*margin-top: .5em;*/
+}
+
+.bt-action {
+    padding: .2em .9em;
+    border: 1px solid white;
+    color: white;
+    font-size: 1em;
+    font-weight: bolder;
+    font-family: Helvetica;
+}
+
+    .cancel{
+        background-color: #e85858;
+    }
+
+        .cancel:hover {
+            border: 1px solid #e85858;
+        }
+
+    .ok{
+        padding: .2em 1.6em;
+        background-color: #5cb85c;
+    }
+
+        .ok:hover {
+            border: 1px solid #5cb85c;
+        }
+
+.shadow {
+    -webkit-box-shadow: 0px 0px 10px 1px rgba(71,71,71,0.25);
+    -moz-box-shadow: 0px 0px 10px 1px rgba(71,71,71,0.25);
+    box-shadow: 0px 0px 10px 1px rgba(71,71,71,0.25);
+}
+
+.red-shadow {
+    -webkit-box-shadow: 0px 0px 12px 3px #e85858;
+    -moz-box-shadow: 0px 0px 12px 3px #e85858;
+    box-shadow: 0px 0px 12px 3px #e85858;
+}
+
+.response {
+    position: absolute;
+    text-align: center;
+    width: auto;
+    height: auto;
+    background-color: #323232;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bolder;
+    color: white;
+    padding: 1em 2em;
+    bottom: 3%;
+    right: 1%;
+}
+
+.row {
+    display: flex;
+    width: 100%;
+    height: 47%;
+    justify-content: space-between;
+    z-index: -10;
+}
+
+@media (orientation: landscape) {
+    .row {
+        display: flex;
+        width: 100%;
+        height: 45%;
+        justify-content: space-between;
+        z-index: -10;
+    }
+}
+
+.grafico-container {
+    width: 100%;
+    height: 100%;
+}
+
+    .canvas{
+        height: 100%;
+        padding: .5em;
+    }
+
+.bt-download {
+    cursor: default;
+    position: absolute;
+    width: 1.8em;
+    height: 1.8em;
+    padding: .5em;
+    /*background-color: #78beff;*/
+    /*background-color: #398adf;*/
+    background-color: #4285f4;
+    border-radius: 30px;
+    bottom: 3%;
+    left: 5%;
+}
+
+    .cuadrado {
+        display: block; 
+        height: .7em;
+        width: .3em;
+        margin: auto;
+        background-color: white;
+    }
+    
+    .triangulo { 
+        display: block;
+        width: 0; 
+        height: 0;
+        margin: 0px auto .2em auto;
+        border-left: .45em double transparent;
+        border-right: .45em double transparent;
+        border-top: .55em solid white; 
+    }
+    
+    .base {
+        position: relative;
+        width: 1.2em;
+        height: .3em;
+        display: block;
+        margin: auto;
+        background-color: white;
+    }

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.3/Chart.min.js"></script>
+        <script>window.Chart || document.write('<script src="script/Chart.js" ><\/script>')</script>
+        <link rel="stylesheet" href="style/styles.css">
+        <title>Document</title>
+    </head>
+    <body>
+
+        <div class="opaque" id="opaque" hidden></div>
+
+        <header>
+            <nav class="navigation shadow">
+                <ul>
+                    <li><button class="bt-play round" id="bt-run" onclick="showAuth()"><div class="bt-triangulo" id="bt-center"></div></button></li>
+                    <li><input title="00:00:00 - 23:59:59" type="text" class="tx round cronometro" id="tx-timer" value="00:00:00" onfocus="filterKey()" onblur="timerValidator(this)"></li>
+                    <li><input title="Muetras entre 1 - 1800 segundos" type="text" class="tx round muestras" id="tx-samples" value="1" onfocus="filterKey()" onblur="sampleValidator(this)"></li>
+                </ul>
+            </nav>
+        </header>
+
+        <div class="credential shadow" id="float-credential" hidden>
+            <form id="auth-form" class="form" onsubmit="return auth(this)" onreset="cancel()">
+                <input type="password" class="password tx" placeholder="Contraseña" id="tx-pass">
+                <div class="bt-container">
+                    <input type="submit" class="ok bt-action" value="Ok" >
+                    <input type="reset" class="cancel bt-action" value="Cancel" >
+                </div>
+            </form>
+        </div>
+
+        <div class="row">
+            <div class="grafico-container" id="parent-grap-ef">
+                <canvas id="grp-ef" class="canvas" >
+                Tu navegador no soporta el elemento CANVAS de HTML5.</canvas>
+            </div>
+            <div class="grafico-container" id="parent-grap-sf">
+                <canvas id="grp-sf" class="canvas"> 
+                Tu navegador no soporta el elemento CANVAS de HTML5.</canvas>
+            </div>
+        </div>
+        <div class="row">
+            <div class="grafico-container" id="parent-grap-ec">
+                <canvas id="grp-ec" class="canvas"> 
+                Tu navegador no soporta el elemento CANVAS de HTML5.</canvas>
+            </div>
+            <div class="grafico-container" id="parent-grap-sc">
+                <canvas id="grp-sc" class="canvas"> 
+                Tu navegador no soporta el elemento CANVAS de HTML5.</canvas>
+            </div>
+        </div>
+
+        <p id="tx-response" class="response shadow" hidden> ... </p>
+
+        <a class="bt-download shadow" title="Descargar datos" id="bt-download" hidden>
+            <span class="cuadrado"></span>
+            <span class="triangulo"></span>
+            <span class="base"></span>
+        </a>
+
+        <script src="script/main.js"></script>
+
+    </body>
+</html>
